@@ -10,7 +10,7 @@
         <style type="text/css">
         
             /*
-            Styles layout this page. They have nothing to to with the embiggen plugin.
+            Styles layout this page. They have nothing to to with the center plugin.
             They have also been 'compressed'.
             ------------------------------------------------------------------------------ */
             
@@ -19,8 +19,8 @@
             code{font-family:"Consolas","Bitstream Vera Sans Mono","Courier New",Courier,monospace !important;color:#000;}
             hr{height:1px;line-height:0;border:0;background-color:#000;margin:3em 0}
             .attribute {font-style: italic; color: #999;}
-            #box{display:none;position:relative;width:600px;height:400px;padding: 20px;background-color:#f1f1f1;border:1px solid #000;text-align: center;}
-            #little-box{width:100px;height:100px;padding: 20px;background-color:#fff;border:1px solid #000;}
+            #box{display:none;position:relative;width:600px;height:400px;padding:20px;background-color:#f1f1f1;border:1px solid #000;text-align: center;}
+            #little-box{width:100px;height:100px;padding:20px;background-color:#fff;border:1px solid #000;}
         </style>
         
         <style type="text/css">
@@ -75,21 +75,20 @@
             
         </div><!-- #container -->
         
-        
         <div id="box">
             <p>I am centered to the window.</p>
             <div id="little-box">
                 <p>I am centered to my parent element. </p>
             </div><!-- #little-box -->
+            
         </div>
-        
         
         <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.5/jquery.min.js"></script>
         <script src="jquery.center.js"></script>
         <script>
             $("#launch-demo").click(function(e){
                 e.preventDefault();
-                $("#box, #little-box").center().show().click(function(){
+                $("#little-box, #box").center().show().click(function(){
                     $(this).hide();
                 })
             })
@@ -100,7 +99,6 @@
     	<script src="http://alexgorbatchev.com/pub/sh/current/scripts/shBrushXml.js"></script>
     	<script src="http://alexgorbatchev.com/pub/sh/current/scripts/shBrushJScript.js"></script>
     	<script src="http://alexgorbatchev.com/pub/sh/current/scripts/shBrushCss.js"></script>
-    	
         <script>SyntaxHighlighter.all();</script>
         
     </body>

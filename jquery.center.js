@@ -32,11 +32,11 @@
             })
             
             if (parentNodeName === "body") {
-                top = ($(window).height() - elem.height()) / 2 + $(window).scrollTop() + "px";
-                left = ($(window).width() - elem.width()) / 2 + $(window).scrollLeft() + "px";
+                top = ($(window).height() - elem.outerHeight()) / 2 + $(window).scrollTop();
+                left = ($(window).width() - elem.outerWidth()) / 2 + $(window).scrollLeft();
             } else {
-                top = ($(elem).parent().height() - elem.height()) / 2 + $(elem).parent().scrollTop() + "px";
-                left = ($(elem).parent().width() - elem.width()) / 2 + $(elem).parent().scrollLeft() + "px"
+                top = ($(elem).parent().height() - elem.outerHeight()) / 2;
+                left = ($(elem).parent().width() - elem.outerWidth()) / 2;
             }
             
             if (o.vertical) {
