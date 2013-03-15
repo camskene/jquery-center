@@ -1,0 +1,29 @@
+
+
+#container {
+	max-width: 60em;
+	padding: 0 1em;
+	margin: 0 auto;
+}
+
+
+#box {
+	display: none;
+	width: 600px;
+	height: 400px;
+	background-color: #f1f1f1;
+	border: 1px solid #000;
+	text-align: center;
+	-moz-transition: all 150ms; 
+	-webkit-transition: all 150ms;  
+	-ms-transition: all 150ms;  
+	transition: all 150ms;  
+}
+
+
+#little-box {
+	width: 200px;
+	height: 100px;
+	background-color: #fff;
+	border: 1px solid #000;
+}

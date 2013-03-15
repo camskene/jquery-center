@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>jQuery Center Plugin</title>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="jQuery center plugin. Centers any element to the browser window.">
+    <link rel="stylesheet" href="http://camskene.com/lib/h5bp/css/normalize.css"/>
+    <link rel="stylesheet" href="http://camskene.com/lib/h5bp/css/main.css"/>
+    <link rel="stylesheet" href="css/style.css">
+    <!-- SyntaxHighligher -->
+    <link rel="stylesheet" href="http://camskene.com/lib/syntaxhighlighter/styles/shCoreDefault.css"/>
+</head>
+<body>
+
+    <div id="container">
+
+        <h1>jQuery Center Plugin</h1>
+
+        <hr>
+
+        <h2>What's it do?</h2>
+        <p>Centers any element to the browser window.<br />This plugin will also center any element to it's relative or absolute positioned parent element.</p>
+
+        <hr>
+
+        <h2>Demo</h2>
+        <p><a id="launch-demo" href="#">Launch demo awesomeness.</a></p>
+        
+        <hr />
+
+        <h2>Options</h2>
+
+        <pre class="brush: js">
+            fixed: true
+        </pre>
+
+        <p>By default, direct children of the body element are fixed. If you'd rather those elements scrolled with the window set <code>fixed</code> to <code>false</code>.</p>
+        
+        <hr>
+
+        <h2>Usage</h2>
+        
+        <h4>HTML</h4>
+        <pre class="brush: xml">
+            <div></div>
+        </pre>
+        
+        <h4>JS</h4>
+        <pre class="brush: js">
+            $("div").center()
+        </pre>
+        <p>or</p>
+        <pre class="brush: js">
+            $("div").center({
+                fixed: false
+            })
+        </pre>
+        
+        <hr>
+
+        <p>The jQuery Center plugin was brought to you by the letter <code>j</code> and the number <code>5</code>.</p>
+        
+        <p><a href="twitter.com/camskene">@camskene</a></p>
+        
+    </div><!-- #container -->
+
+    <div id="box">
+        <p>Centered to Window.</p>
+        <div id="little-box">
+            <p>Centered to parent.</p>
+        </div>
+    </div>
+
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+
+    <script src="js/jquery.center.js"></script>
+
+    <script>
+        $("#launch-demo").on("click",function(e) {
+
+            e.preventDefault();
+
+            $("#little-box, #box")
+                .center()
+                .show()
+                .on("click",function() {
+                    $(this).hide();
+                })
+
+        })
+    </script>
+
+
+
+
+
+
+
+    <!-- SyntaxHighligher -->
+    <script src="http://camskene.com/lib/syntaxhighlighter/scripts/shCore.js"></script>
+    <script src="http://camskene.com/lib/syntaxhighlighter/scripts/shBrushJScript.js"></script>
+    <script src="http://camskene.com/lib/syntaxhighlighter/scripts/shBrushXml.js"></script>
+    <script type="text/javascript">     
+        SyntaxHighlighter.defaults['gutter'] = true;
+        SyntaxHighlighter.defaults['toolbar'] = false;    
+        SyntaxHighlighter.all();
+    </script>
+</body>
+</html>
