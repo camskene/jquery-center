@@ -5,10 +5,6 @@
 Centers any element to the browser window.
 This plugin will also center any element to it's relative or absolute positioned parent element.
 
-### Demo
-
-[camskene.com/plugins/jquery-center/](http://camskene.com/plugins/jquery-center/)
-
 
 ### Options
 
